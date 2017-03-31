@@ -18,7 +18,7 @@ after_script:
   - git config user.name "zsychy"
   - git config user.email "984249214@qq.com"
   - git add .
-  - git commit -m "vue-object-lol"
+  - git commit -m "vue-zhihu"
   - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:gh-pages
 # E: Build LifeCycle
 # 设置只有master的push才进行构建
@@ -27,4 +27,4 @@ branches:
     - master
 env:
  global:
-   - GH_REF: github.com/zsychy/vue-object-lol.git
+   - GH_REF: github.com:zsychy/vue-zhihu.git
