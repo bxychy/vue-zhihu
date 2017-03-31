@@ -27,4 +27,4 @@ branches:
     - master
 env:
  global:
-   - GH_REF: github.com:zsychy/vue-zhihu.git
+   - GH_REF: github.com/zsychy/vue-zhihu.git
