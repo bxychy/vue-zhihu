@@ -119,7 +119,7 @@ img{width: 100%;}
 .app-view .newsList:nth-child(2) .newsList-time{top: -.8rem;}
 
 	
-.swiper-slide div{top: 0;left: 0;width: 100%;height: 100%; opacity: 0.4;position: absolute;}
+.swiper-slide div{top: 0;left: 0;width: 100%;height: 100%; opacity: 0.4;position: absolute;background-color:#fff;}
 .swiper-slide img{top: 50%;position: relative;transform: translate(0, -50%);}
 .swiper-slide h3{width: 70%;color: #fff;margin: 0;font-size: 0.5rem;line-height: 1rem;right: 5%;bottom: 2.6rem;text-align: right;position: absolute;text-shadow: 1px 1px 10px rgba(0, 0, 0, .5);}
 
