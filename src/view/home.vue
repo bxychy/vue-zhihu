@@ -23,7 +23,7 @@
 			<span class="left"></span>
 		</div>
 		
-		<button @click="loadMore" style="width:100px;height:100px;"></button>
+		<button @click="loadMore" style="width:50px;height:50px;"></button>
 		<!-- 滑动加载更多组件 -->
 		<!--<div :scroller="scroller" :loading="loading" @load="loadMore"></div>-->
 	</div>
