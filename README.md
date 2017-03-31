@@ -1,7 +1,6 @@
 # vue-zhihu
 
-> A Vue.js project
-
+> 仿知乎日报APP
 ## Build Setup
 
 ``` bash
