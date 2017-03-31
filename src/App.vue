@@ -103,13 +103,5 @@ header .iconfont{color: #fff;font-size: 0.8rem;top: 20%;position: relative;}
 .aside ul li .iconfont{float: right;font-size: 0.6rem;}
 .aside ul li.select{color: #FFD300;}
 
-.app-view {
-    z-index: 1;
-    width: 100vw;
-    height: 100vh;
-    overflow: auto;
-    position: absolute;
-    transition: transform 0.3s ease;
-    -webkit-overflow-scrolling: touch;
-}
+.app-view{z-index: 1;width: 100vw;height: 100vh;overflow: auto;position: absolute;transition: transform 0.3s ease;-webkit-overflow-scrolling: touch;}
 </style>
