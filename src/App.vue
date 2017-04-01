@@ -2,7 +2,7 @@
 	<div id="app">
 		<header>
 			<i v-if="!flag" class="iconfont icon-ic_menu" @click="toggle(true)"></i>
-			<i v-else-if="flag" class="iconfont icon-ic_back" @click="back()"></i>
+			<i v-if="flag" class="iconfont icon-ic_back" @click="back()"></i>
 		</header>
 		<aside class="aside" :class="{open:open,docked:docked}" @click="toggle()">
 			<ul>
@@ -22,9 +22,9 @@
 		</aside>
 		
 		<transition :name="transitionName">
-			<!--<keep-alive>-->
+			<keep-alive>
 				<router-view class="app-view" :class="{'app-view-hidden':docked}"></router-view>
-			<!--</keep-alive>-->
+			</keep-alive>
 		</transition>
 		
 	</div>

@@ -23,9 +23,11 @@
 			<span class="left"></span>
 		</div>
 		
-		<button @click="loadMore" style="width:50px;height:50px;"></button>
+		<!--<button @click="loadMore" style="width:50px;height:50px;"></button>-->
+		
+			
 		<!-- 滑动加载更多组件 -->
-		<!--<div :scroller="scroller" :loading="loading" @load="loadMore"></div>-->
+		<init-scroll :scroller="scroller" :loading="loading" @load="loadMore" />
 	</div>
 </template>
 
@@ -35,12 +37,12 @@ import {mapState} from 'vuex'
 export default{
 	computed:{
 		...mapState({
-			circle: state => state.circleFlag,
+//			circle: state => state.circleFlag,
 		})
 	},
 	mounted() {
 		this.getList(1);
-//		this.scroller = this.$el;
+		this.scroller = this.$el;
 		var swiper = this.$refs.swiper;
 		if (swiper.dom) {
 			this.swiper = swiper.dom;
@@ -94,16 +96,15 @@ export default{
 			}, 500)
 		},
 		GetDate(Count) {
-			var dd = new Date();
-			dd.setDate(dd.getDate() + Count); //获取AddDayCount天后的日期
+			var nowTime = new Date();
+			nowTime.setDate(nowTime.getDate() + Count); //获取AddDayCount天后的日期
 			
-			var y = dd.getFullYear();
-			var m = dd.getMonth() + 1; //获取当前月份的日期
-			m = m > 10 ? m : "0" + m
-			var d = dd.getDate();
-			d = d >= 10 ? d : "0" + d;
-			console.log('91',y,m,d);
-			return y + "" + m + "" + d;
+			var year = nowTime.getFullYear();
+			var month = nowTime.getMonth() + 1; //获取当前月份的日期
+			month = month > 10 ? month : "0" + month
+			var day = nowTime.getDate();
+			day = day >= 10 ? day : "0" + day;
+			return year + "" + month + "" + day;
 		}
 	}
 }
@@ -124,7 +125,7 @@ img{width: 100%;}
 .swiper-slide h3{width: 70%;color: #fff;margin: 0;font-size: 0.5rem;line-height: 1rem;right: 5%;bottom: 2.6rem;text-align: right;position: absolute;text-shadow: 1px 1px 10px rgba(0, 0, 0, .5);}
 
 .newsList{width: 90%;z-index: 1;position: relative;padding-top: 0.8rem;margin: .8rem auto 0;}
-.newsList .newsList-time{top: 0;margin: 0;color: #fff;padding: 0 1rem;font-size: 0.4rem;line-height: 0.8rem;letter-spacing: 0.1rem;border-radius: 0.4rem;text-align: center;background-color:yellow;transform: translate(0,-50%);position: absolute;box-shadow: 0 3px 10px 0 rgba(91,115,146,0.15);}
+.newsList .newsList-time{top: 0;margin: 0;color: #fff;padding: 0 1rem;font-size: 0.4rem;line-height: 0.8rem;letter-spacing: 0.1rem;border-radius: 0.4rem;text-align: center;background-color:yellow;transform: translate(0,-50%);position: absolute;box-shadow: 0 3px 10px 0 rgba(91,115,146,0.15);z-index:2;}
 .newsList .newsList-con{cursor: pointer;display: flex;padding: 0.3rem;margin-bottom: 0.4rem;border-radius: 0.15rem;align-items: center;background-color: #fff;box-shadow: 0 3px 10px 0 rgba(91,115,146,0.15);}
 .newsList .newsList-con img{width: 2rem;margin-right: 0.4rem;}
 .newsList .newsList-con p{color:#5B7492;font-size: 0.4rem;text-align: justify;margin: 0;}
