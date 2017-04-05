@@ -75,7 +75,7 @@ export default{
 			}
 		},
 		change(n,id){
-			var path = n == 1 ? 'home' : 'theme';
+			var path = n == 1 ? 'home' : 'newIndex';
 			this.$router.push({
 				path:path,
 				query:{
